@@ -17,10 +17,10 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> getData() async {
     print("getData pressed");
-    dbrf.child("rtdb").onValue.listen((event) {
+    dbrf.child("HeatIndex").onValue.listen((event) {
       setState(() {
         map = event.snapshot.value as Map;
-        temprature = map["temprature"].toString();
+        temprature = map["temperature"].toString();
         humidity = map["humidity"].toString();
       });
       print(temprature);
