@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // final Future<FirebaseApp> future = Firebase.initializeApp();
   final dbrf = FirebaseDatabase.instance.ref();
   Map map = {};
   String temprature = "";
@@ -18,7 +17,7 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> getData() async {
     print("getData pressed");
-    await dbrf.child("rtdb").onValue.listen((event) {
+    dbrf.child("rtdb").onValue.listen((event) {
       setState(() {
         map = event.snapshot.value as Map;
         temprature = map["temprature"].toString();
@@ -56,10 +55,19 @@ class _HomePageState extends State<HomePage> {
                             height: 100,
                             alignment: Alignment.center,
                             color: Colors.white,
-                            child: Text(
-                              temprature,
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.w600),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text(
+                                  "Temprature",
+                                ),
+                                Text(
+                                  temprature, //temprature
+                                  style: TextStyle(
+                                      fontSize: 40,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ],
                             ),
                           )),
                           SizedBox(
@@ -70,10 +78,19 @@ class _HomePageState extends State<HomePage> {
                             height: 100,
                             alignment: Alignment.center,
                             color: Colors.white,
-                            child: Text(
-                              humidity,
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.w600),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text(
+                                  "humidity",
+                                ),
+                                Text(
+                                  humidity, //humidity
+                                  style: TextStyle(
+                                      fontSize: 40,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ],
                             ),
                           ))
                         ],
