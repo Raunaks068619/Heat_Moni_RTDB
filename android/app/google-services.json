@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1002161501774",
+    "project_id": "opdo-3b256",
+    "storage_bucket": "opdo-3b256.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002161501774:android:be25264d2b68dcd750351f",
+        "android_client_info": {
+          "package_name": "com.example.rtdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002161501774-j9vhi2pn2veevmgdg6rvvrdm6csjh3pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCBwVAqN0u_BBZuVsr0bHZiwsKeOO2eK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002161501774-j9vhi2pn2veevmgdg6rvvrdm6csjh3pf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
